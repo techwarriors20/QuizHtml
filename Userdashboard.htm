@@ -1,0 +1,1062 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash System</title>
+    <!--STYLESHEET-->
+    <!--=================================================-->
+    <!--Open Sans Font [ OPTIONAL ]-->
+    <link href="Content/css.css" rel="stylesheet" type="text/css">
+    <!--Bootstrap Stylesheet [ REQUIRED ]-->
+    <link href="Content/bootstrap.css" rel="stylesheet">
+    <!--Nifty Stylesheet [ REQUIRED ]-->
+    <link href="Content/nifty.css" rel="stylesheet">
+    <!--Nifty Premium Icon [ DEMONSTRATION ]-->
+    <link href="Content/nifty-demo-icons.css" rel="stylesheet">
+    <!--Demo [ DEMONSTRATION ]-->
+    <link href="Content/nifty-demo.css" rel="stylesheet">
+    <!--Morris.js [ OPTIONAL ]-->
+    <link href="Content/morris.css" rel="stylesheet">
+    <!--Magic Checkbox [ OPTIONAL ]-->
+    <link href="Content/magic-check.css" rel="stylesheet">
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+    <!--Pace - Page Load Progress Par [OPTIONAL]-->
+    <link href="Content/pace.css" rel="stylesheet">
+    <script src="Content/pace.js"></script>
+    <!--jQuery [ REQUIRED ]-->
+    <script src="Content/jquery.js"></script>
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="Content/bootstrap.js"></script>
+    <!--NiftyJS [ RECOMMENDED ]-->
+    <script src="Content/nifty.js"></script>
+    <!--=================================================-->
+    <!--Demo script [ DEMONSTRATION ]-->
+    <script src="Content/nifty-demo.js"></script>
+     
+     
+    <!--Sparkline [ OPTIONAL ]-->
+    <script src="Content/jquery_002.js"></script>
+    <!--Specify page [ SAMPLE ]-->
+    <script src="Content/dashboard.js"></script>
+    <style type="text/css">
+        .jqstooltip
+        {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background-color: #37474f;
+            box-shadow: 0 2px 2px rgba(0,0,0,.5);
+            color: white;
+            text-align: right;
+            white-space: nowrap;
+            padding: 7px 14px;
+            z-index: 1000;
+        }
+        .jqsfield
+        {
+            color: white;
+            font-size: 14;
+            text-align: right;
+        }
+    </style>
+</head>
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body class="  pace-done" cz-shortcut-listen="true">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+            <div class="pace-progress-inner">
+            </div>
+        </div>
+        <div class="pace-activity">
+        </div>
+    </div>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+        <!--NAVBAR-->
+        <!--===================================================-->
+        <header id="navbar">
+            <div id="navbar-container"  class="boxed">
+
+                
+
+
+                <!--Navbar Dropdown-->
+                <!--================================-->
+                <div class="navbar-content clearfix" style="margin-left: 1px;">
+                    <ul class="nav navbar-top-links pull-left">
+
+                        <li class="tgl-menu-btn">
+                            
+                            <a href="#" class="navbar-brand">
+                                <img src="Content/logo.png" alt="Nifty Logo" class="brand-icon">
+                                <div class="brand-title">
+                                    <span style="color: orange;">Hackathon</span>
+                                </div>
+                            </a>
+                         
+                    </li>
+
+
+
+                        <!--Notification dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li class="dropdown">
+                             
+
+                            <!--Notification dropdown menu-->
+                            <div class="dropdown-menu dropdown-menu-md">
+                                <div class="pad-all bord-btm">
+                                    <p class="text-semibold text-main mar-no">You have 9 notifications.</p>
+                                </div>
+                                <div class="nano scrollable">
+                                    <div class="nano-content">
+                                        <ul class="head-list">
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!--Dropdown footer-->
+                                <div class="pad-all bord-top">
+                                    <a href="#" class="btn-link text-dark box-block">
+                                        <i class="fa fa-angle-right fa-lg pull-right"></i>Show All Notifications
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End notifications dropdown-->
+
+
+
+                         
+
+                    </ul>
+                    <ul class="nav navbar-top-links pull-right">
+
+                        
+
+
+
+                        <!--User dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="pull-right">
+                                    <!--<img class="img-circle img-user media-object" src="img/profile-photos/1.png" alt="Profile Picture">-->
+                                    <i class="demo-pli-male ic-user"></i>
+                                </span>
+                                <div class="username hidden-xs">Administrator</div>
+                            </a>
+
+
+                            <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
+
+                               
+
+                                <!-- User dropdown menu -->
+                                <ul class="head-list">
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-male icon-lg icon-fw"></i> Profile
+                                        </a>
+                                    </li>
+                                     
+                                    <li>
+                                        <a href="#">
+                                            <span class="label label-success pull-right">New</span>
+                                            <i class="demo-pli-gear icon-lg icon-fw"></i> Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="demo-pli-information icon-lg icon-fw"></i> Help
+                                        </a>
+                                    </li>
+                                    
+                                    
+                                </ul>
+
+                                <!-- Dropdown footer -->
+                                <div class="pad-all text-right">
+                                    <a href="#" class="btn btn-primary">
+                                        <i class="demo-pli-unlock"></i> Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End user dropdown-->
+
+                        <li>
+                            <a href="#" class="aside-toggle navbar-aside-icon">
+                                <i class="pci-ver-dots"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+        <div class="boxed">
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container" style="padding-left: 6px;">
+                <!--Page Title-->
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <div id="page-title">
+                    <h1 class="page-header text-overflow">
+                        Dashboard</h1>
+                    <!--Searchbox-->
+                    <div class="searchbox">
+                        <div class="input-group custom-search-form">
+                              
+                        </div>
+                    </div>
+                </div>
+                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                <!--End page title-->
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
+                    <div class="row">
+                         
+                        <div class="col-lg-13">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-6">
+                                    <!--Sparkline Area Chart-->
+                                    <div class="panel panel-success panel-colorful">
+                                        <div class="pad-all">
+                                            <p class="text-lg text-semibold">
+                                                <i class="demo-pli-heart-2 icon-fw"></i>Self Check</p>
+                                            <p class="mar-no">
+                                                <span class="pull-right text-bold">3</span> <a style="color:blue;;" href="Category.htm">Assigned Course  </a>
+                                            </p>
+                                            <p class="mar-no">
+                                                <span class="pull-right text-bold">2</span> Pending
+                                            </p>
+                                            <p class="mar-no">
+                                                <span class="pull-right text-bold">1</span> Completed
+                                            </p>
+                                             
+                                        </div>
+                                        <div class="pad-all">
+                                            <ul class="list-group list-unstyled">
+                                                <li class="mar-btm"><span class="label label-warning pull-right">20%</span>
+                                                    <p>
+                                                        Total Score</p>
+                                                    <div class="progress progress-md">
+                                                        <div style="width: 20%;" class="progress-bar progress-bar-light">
+                                                            <span class="sr-only">20%</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <!--Sparkline Line Chart-->
+                                    <div class="panel panel-info panel-colorful">
+                                        <div class="pad-all">
+                                            <p class="text-lg text-semibold">
+                                                <i class="demo-pli-idea-2 icon-fw"></i>How I learn</p>
+                                                <p class="mar-no">
+                                                    <span class="pull-right text-bold">4</span> No. of Categories  
+                                                </p>
+                                                <p class="mar-no">
+                                                    <span class="pull-right text-bold">10</span> Per Categories  
+                                                </p>
+                                                <p class="mar-no">
+                                                    <span class="pull-right text-bold">9</span> Completed Q & A 
+                                                </p>
+                                        </div>
+                                        <div class="pad-all">
+                                            <ul class="list-group list-unstyled">
+                                                <li class="mar-btm"><span class="label label-warning pull-right">90%</span>
+                                                    <p>
+                                                        Question & Answer</p>
+                                                    <div class="progress progress-md">
+                                                        <div style="width: 90%;" class="progress-bar progress-bar-light">
+                                                            <span class="sr-only">90%</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-6">
+                                    <!--Sparkline bar chart -->
+                                    <div class="panel panel-purple panel-colorful">
+                                        <div class="pad-all">
+                                            <p class="text-lg text-semibold">
+                                                <i class="demo-pli-lock-user icon-fw"></i>Adoption</p>
+                                                <p class="mar-no">
+                                                <span class="pull-right text-bold">4</span> No. of Categories  
+                                            </p>
+                                            <p class="mar-no">
+                                                <span class="pull-right text-bold">10</span> Per Categories  
+                                            </p>
+                                            <p class="mar-no">
+                                                <span class="pull-right text-bold">8</span> Completed Q & A 
+                                            </p>
+                                        </div>
+                                        <div class="pad-all">
+                                            <ul class="list-group list-unstyled">
+                                                <li class="mar-btm"><span class="label label-warning pull-right">80%</span>
+                                                    <p>
+                                                        Question & Answer</p>
+                                                    <div class="progress progress-md">
+                                                        <div style="width: 80%;" class="progress-bar progress-bar-light">
+                                                            <span class="sr-only">80%</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6">
+                                    <!--Sparkline pie chart -->
+                                    <div class="panel panel-warning panel-colorful">
+                                        <div class="pad-all">
+                                            <p class="text-lg text-semibold">
+                                                <i class="demo-pli-check icon-fw"></i>Empty</p>
+                                                <p class="mar-no">
+                                                    <span class="pull-right text-bold">0</span> No. of Categories  
+                                                </p>
+                                                <p class="mar-no">
+                                                    <span class="pull-right text-bold">0</span> Per Categories  
+                                                </p>
+                                                <p class="mar-no">
+                                                    <span class="pull-right text-bold">0</span> Completed Q & A 
+                                                </p>
+                                        </div>
+                                        <div class="pad-all">
+                                            <ul class="list-group list-unstyled">
+                                                <li class="mar-btm"><span class="label label-warning pull-right">0%</span>
+                                                    <p>
+                                                        Quesion & Answer</p>
+                                                    <div class="progress progress-md">
+                                                        <div style="width: 0%;" class="progress-bar progress-bar-light">
+                                                            <span class="sr-only">0%</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     
+                </div>
+                <!--===================================================-->
+                <!--End page content-->
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+            
+            
+        </div>
+        <!-- FOOTER -->
+        <!--===================================================-->
+        <footer id="footer">
+
+            <!-- Visible when footer positions are fixed -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="show-fixed pull-right">
+                You have <a href="#" class="text-bold text-main"><span class="label label-danger">3</span> pending action.</a>
+            </div>
+
+
+
+            
+
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <p class="pad-lft">© 2020 FSD-2</p>
+
+
+
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+        <!-- SCROLL PAGE BUTTON -->
+        <!--===================================================-->
+        <button class="scroll-top btn">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+        <!--===================================================-->
+        <div id="floating-top-right" class="floating-container">
+        </div>
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+    <!-- SETTINGS - DEMO PURPOSE ONLY -->
+    <!--===================================================-->
+    <div id="demo-set" class="demo-set">
+        <div id="demo-set-body" class="demo-set-body collapse">
+            <div id="demo-set-alert">
+            </div>
+            <div class="pad-hor bord-btm clearfix">
+                <div class="pull-right pad-top">
+                    <button id="demo-btn-close-settings" class="btn btn-trans">
+                        <i class="pci-cross pci-circle icon-lg"></i>
+                    </button>
+                </div>
+                <div class="media">
+                    <div class="media-left">
+                        <i class="demo-pli-gear icon-2x"></i>
+                    </div>
+                    <div class="media-body">
+                        <span class="text-semibold text-lg text-main">Costomize</span>
+                        <p class="text-muted text-sm">
+                            Customize Nifty's layout, sidebars, and color schemes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-set-content clearfix">
+                <div class="col-xs-6 col-md-3">
+                    <div class="pad-all bg-gray-light">
+                        <p class="text-semibold text-main text-lg">
+                            Layout</p>
+                        <p class="text-semibold text-main">
+                            Boxed Layout</p>
+                        <div class="pad-btm">
+                            <div class="pull-right">
+                                <input id="demo-box-lay" class="toggle-switch" type="checkbox">
+                                <label for="demo-box-lay">
+                                </label>
+                            </div>
+                            Boxed Layout
+                        </div>
+                        <div class="pad-btm">
+                            <div class="pull-right">
+                                <button id="demo-box-img" class="btn btn-sm btn-trans" disabled="disabled">
+                                    <i class="pci-hor-dots"></i>
+                                </button>
+                            </div>
+                            Background Images <span class="label label-primary">New</span>
+                        </div>
+                        <hr class="new-section-xs bord-no">
+                        <p class="text-semibold text-main">
+                            Animations</p>
+                        <div class="pad-btm">
+                            <div class="pull-right">
+                                <input id="demo-anim" class="toggle-switch" checked="checked" type="checkbox">
+                                <label for="demo-anim">
+                                </label>
+                            </div>
+                            Enable Animations
+                        </div>
+                        <div class="pad-btm">
+                            <div class="select pull-right">
+                                <select id="demo-ease">
+                                    <option value="effect" selected="selected">ease (Default)</option>
+                                    <option value="easeInQuart">easeInQuart</option>
+                                    <option value="easeOutQuart">easeOutQuart</option>
+                                    <option value="easeInBack">easeInBack</option>
+                                    <option value="easeOutBack">easeOutBack</option>
+                                    <option value="easeInOutBack">easeInOutBack</option>
+                                    <option value="steps">Steps</option>
+                                    <option value="jumping">Jumping</option>
+                                    <option value="rubber">Rubber</option>
+                                </select>
+                            </div>
+                            Transitions
+                        </div>
+                        <hr class="new-section-xs bord-no">
+                        <p class="text-semibold text-main text-lg">
+                            Header / Navbar</p>
+                        <div>
+                            <div class="pull-right">
+                                <input id="demo-navbar-fixed" class="toggle-switch" type="checkbox">
+                                <label for="demo-navbar-fixed">
+                                </label>
+                            </div>
+                            Fixed Position
+                        </div>
+                        <hr class="new-section-xs bord-no">
+                        <p class="text-semibold text-main text-lg">
+                            Footer</p>
+                        <div class="pad-btm">
+                            <div class="pull-right">
+                                <input id="demo-footer-fixed" class="toggle-switch" type="checkbox">
+                                <label for="demo-footer-fixed">
+                                </label>
+                            </div>
+                            Fixed Position
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 pos-rel">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="pad-all">
+                                <p class="text-semibold text-main text-lg">
+                                    Sidebars</p>
+                                <p class="text-semibold text-main">
+                                    Navigation</p>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-nav-fixed" class="toggle-switch" type="checkbox">
+                                        <label for="demo-nav-fixed">
+                                        </label>
+                                    </div>
+                                    Fixed Position
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-nav-profile" class="toggle-switch" checked="checked" type="checkbox">
+                                        <label for="demo-nav-profile">
+                                        </label>
+                                    </div>
+                                    Widget Profil <small class="label label-primary">New</small>
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-nav-shortcut" class="toggle-switch" checked="checked" type="checkbox">
+                                        <label for="demo-nav-shortcut">
+                                        </label>
+                                    </div>
+                                    Shortcut Buttons
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-nav-coll" class="toggle-switch" type="checkbox">
+                                        <label for="demo-nav-coll">
+                                        </label>
+                                    </div>
+                                    Collapsed Mode
+                                </div>
+                                <div class="clearfix">
+                                    <div class="select pad-btm pull-right">
+                                        <select id="demo-nav-offcanvas">
+                                            <option value="none" selected="selected" disabled="disabled">-- Select Mode --</option>
+                                            <option value="push">Push</option>
+                                            <option value="slide">Slide in on top</option>
+                                            <option value="reveal">Reveal</option>
+                                        </select>
+                                    </div>
+                                    Off-Canvas
+                                </div>
+                                <p class="text-semibold text-main">
+                                    Aside</p>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-asd-vis" class="toggle-switch" type="checkbox">
+                                        <label for="demo-asd-vis">
+                                        </label>
+                                    </div>
+                                    Visible
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-asd-fixed" class="toggle-switch" checked="checked" type="checkbox">
+                                        <label for="demo-asd-fixed">
+                                        </label>
+                                    </div>
+                                    Fixed Position
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-asd-float" class="toggle-switch" checked="checked" type="checkbox">
+                                        <label for="demo-asd-float">
+                                        </label>
+                                    </div>
+                                    Floating <span class="label label-primary">New</span>
+                                </div>
+                                <div class="mar-btm">
+                                    <div class="pull-right">
+                                        <input id="demo-asd-align" class="toggle-switch" type="checkbox">
+                                        <label for="demo-asd-align">
+                                        </label>
+                                    </div>
+                                    Left Side
+                                </div>
+                                <div>
+                                    <div class="pull-right">
+                                        <input id="demo-asd-themes" class="toggle-switch" type="checkbox">
+                                        <label for="demo-asd-themes">
+                                        </label>
+                                    </div>
+                                    Dark Version
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div id="demo-theme">
+                                <div class="row bg-gray-light pad-top">
+                                    <p class="text-semibold text-main text-lg pad-lft">
+                                        Color Schemes</p>
+                                    <div class="demo-theme-btn col-md-4 pad-ver">
+                                        <p class="text-semibold text-main">
+                                            Header</p>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-a-light add-tooltip" data-theme="theme-light"
+                                                data-type="a" data-title="(A). Light" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-a-navy add-tooltip" data-theme="theme-navy"
+                                                data-type="a" data-title="(A). Navy Blue" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-a-ocean add-tooltip" data-theme="theme-ocean"
+                                                data-type="a" data-title="(A). Ocean" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-a-lime add-tooltip" data-theme="theme-lime" data-type="a"
+                                                data-title="(A). Lime" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-a-purple add-tooltip" data-theme="theme-purple"
+                                                data-type="a" data-title="(A). Purple" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-a-dust add-tooltip" data-theme="theme-dust"
+                                                data-type="a" data-title="(A). Dust" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-a-mint add-tooltip" data-theme="theme-mint" data-type="a"
+                                                data-title="(A). Mint" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-a-yellow add-tooltip" data-theme="theme-yellow"
+                                                data-type="a" data-title="(A). Yellow" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-a-well-red add-tooltip" data-theme="theme-well-red"
+                                                data-type="a" data-title="(A). Well Red" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-a-coffee add-tooltip" data-theme="theme-coffee"
+                                                data-type="a" data-title="(A). Coffee" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-a-prickly-pear add-tooltip" data-theme="theme-prickly-pear"
+                                                data-type="a" data-title="(A). Prickly pear" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-a-dark add-tooltip" data-theme="theme-dark"
+                                                data-type="a" data-title="(A). Dark" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="demo-theme-btn col-md-4 pad-ver">
+                                        <p class="text-semibold text-main">
+                                            Brand</p>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-b-light add-tooltip" data-theme="theme-light"
+                                                data-type="b" data-title="(B). Light" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-b-navy add-tooltip" data-theme="theme-navy"
+                                                data-type="b" data-title="(B). Navy Blue" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-b-ocean add-tooltip" data-theme="theme-ocean"
+                                                data-type="b" data-title="(B). Ocean" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-b-lime add-tooltip" data-theme="theme-lime" data-type="b"
+                                                data-title="(B). Lime" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-b-purple add-tooltip" data-theme="theme-purple"
+                                                data-type="b" data-title="(B). Purple" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-b-dust add-tooltip" data-theme="theme-dust"
+                                                data-type="b" data-title="(B). Dust" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-b-mint add-tooltip" data-theme="theme-mint" data-type="b"
+                                                data-title="(B). Mint" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-b-yellow add-tooltip" data-theme="theme-yellow"
+                                                data-type="b" data-title="(B). Yellow" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-b-well-red add-tooltip" data-theme="theme-well-red"
+                                                data-type="b" data-title="(B). Well red" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-b-coffee add-tooltip" data-theme="theme-coffee"
+                                                data-type="b" data-title="(B). Coofee" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-b-prickly-pear add-tooltip" data-theme="theme-prickly-pear"
+                                                data-type="b" data-title="(B). Prickly pear" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-b-dark add-tooltip" data-theme="theme-dark"
+                                                data-type="b" data-title="(B). Dark" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="demo-theme-btn col-md-4 pad-ver">
+                                        <p class="text-semibold text-main">
+                                            Navigation</p>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-c-light add-tooltip" data-theme="theme-light"
+                                                data-type="c" data-title="(C). Light" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-c-navy add-tooltip" data-theme="theme-navy"
+                                                data-type="c" data-title="(C). Navy Blue" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-c-ocean add-tooltip" data-theme="theme-ocean"
+                                                data-type="c" data-title="(C). Ocean" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-c-lime add-tooltip" data-theme="theme-lime" data-type="c"
+                                                data-title="(C). Lime" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-c-purple add-tooltip" data-theme="theme-purple"
+                                                data-type="c" data-title="(C). Purple" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-c-dust add-tooltip" data-theme="theme-dust"
+                                                data-type="c" data-title="(C). Dust" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-c-mint add-tooltip" data-theme="theme-mint" data-type="c"
+                                                data-title="(C). Mint" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-c-yellow add-tooltip" data-theme="theme-yellow"
+                                                data-type="c" data-title="(C). Yellow" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-c-well-red add-tooltip" data-theme="theme-well-red"
+                                                data-type="c" data-title="(C). Well Red" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="demo-justify-theme">
+                                            <a href="#" class="demo-theme demo-c-coffee add-tooltip" data-theme="theme-coffee"
+                                                data-type="c" data-title="(C). Coffee" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-c-prickly-pear add-tooltip" data-theme="theme-prickly-pear"
+                                                data-type="c" data-title="(C). Prickly pear" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a><a href="#" class="demo-theme demo-c-dark add-tooltip" data-theme="theme-dark"
+                                                data-type="c" data-title="(C). Dark" data-original-title="" title="">
+                                                <div class="demo-theme-brand">
+                                                </div>
+                                                <div class="demo-theme-head">
+                                                </div>
+                                                <div class="demo-theme-nav">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="demo-bg-boxed" class="demo-bg-boxed">
+                        <div class="demo-bg-boxed-content">
+                            <p class="text-semibold text-main text-lg mar-no">
+                                Background Images</p>
+                            <p class="text-sm text-muted">
+                                Add an image to replace the solid background color</p>
+                            <div class="row">
+                                <div class="col-lg-4 text-justify">
+                                    <p class="text-semibold text-main">
+                                        Blurred</p>
+                                    <div id="demo-blurred-bg" class="text-justify">
+                                        <!--Blurred Backgrounds-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-justify">
+                                    <p class="text-semibold text-main">
+                                        Polygon &amp; Geometric</p>
+                                    <div id="demo-polygon-bg" class="text-justify">
+                                        <!--Polygon Backgrounds-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-justify">
+                                    <p class="text-semibold text-main">
+                                        Abstract</p>
+                                    <div id="demo-abstract-bg" class="text-justify">
+                                        <!--Abstract Backgrounds-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-bg-boxed-footer">
+                            <button id="demo-close-boxed-img" class="btn btn-primary">
+                                Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;</button>
+                        <h4 class="modal-title">
+                            Assign Tickets</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="name">
+                                #Ticket </label>
+                            <div class="col-md-8">
+                                <input id="name" name="name" placeholder="Ticket Id" class="form-control input-md"
+                                    type="text">
+                                 
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="name">
+                                Module Name</label>
+                            <div class="col-md-8">
+                                <input id="Text1" name="name" placeholder="Module Name" class="form-control input-md"
+                                    type="text">
+                                 
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="name">
+                                Location Path</label>
+                            <div class="col-md-8">
+                                <input id="Text2" name="name" placeholder="Your Location path" class="form-control input-md"
+                                    type="text">
+                                 
+                            </div>
+                        </div>
+                      
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal"> Save</button>
+                        <button type="button" class="btn btn-purple" data-dismiss="modal"> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--===================================================-->
+    <!-- END SETTINGS -->
+    <i title="Raphaël Colour Picker" style="display: none; color: transparent;"></i>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#toggleLeftPanel').trigger('click');
+        });
+        $('#searchctl').keypress(function (e) {
+            var key = e.which;
+
+            if (key == 13)  // the enter key code
+            {
+
+                window.location.href = "../Hackathon/TimeLine.htm?tid=" + $('#searchctl').val();
+            }
+        })
+
+
+        $('#demo-bootbox-custom-h-form').on('click', function () {
+            alert("1");
+
+        });
+    </script>
+</body>
+</html>
